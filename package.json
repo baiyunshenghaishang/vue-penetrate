@@ -1,10 +1,10 @@
 {
-  "name": "vue-penetrate",
-  "version": "0.1.1",
+  "name": "penetrate",
+  "version": "0.1.2",
   "private": false,
   "scripts": {
     "serve": "vue-cli-service serve",
-    "build": "vue-cli-service build --target lib --name vue-penetrate ./source/index.js",
+    "build": "vue-cli-service build --target lib --name penetrate ./source/index.js",
     "lint": "vue-cli-service lint",
     "start": "npm run serve"
   },
@@ -40,5 +40,5 @@
       "git add"
     ]
   },
-  "main": "./dist/vue-penetrate.umd.min.js"
+  "main": "./dist/penetrate.umd.min.js"
 }

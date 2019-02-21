@@ -4,9 +4,9 @@
 	else if(typeof define === 'function' && define.amd)
 		define([], factory);
 	else if(typeof exports === 'object')
-		exports["vue-penetrate"] = factory();
+		exports["penetrate"] = factory();
 	else
-		root["vue-penetrate"] = factory();
+		root["penetrate"] = factory();
 })((typeof self !== 'undefined' ? self : this), function() {
 return /******/ (function(modules) { // webpackBootstrap
 /******/ 	// The module cache
@@ -169,4 +169,4 @@ if (typeof window !== 'undefined') {
 
 /******/ });
 });
-//# sourceMappingURL=vue-penetrate.umd.js.map
+//# sourceMappingURL=penetrate.umd.js.map
