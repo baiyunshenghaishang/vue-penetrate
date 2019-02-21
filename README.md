@@ -12,16 +12,16 @@ vue的防止穿透指令
 ```
 
 ```javascript
-    // 定义组件内指令,在组件中
+    // 定义组件内指令
     import penetrate from "penetrate";
     directives: {
         penetrate 
     },
-    // 或者定义全局指令,在入口文件中
+    // 或定义全局指令
     import penetrate from "penetrate";
     Vue.directive('penetrate', penetrate)
 ```
 ```html
-    <!-- 定义指令后在模板中使用 -->
-    <div v-penetrate></div>
+    <!-- 定义指令后在遮罩层上使用 -->
+    <div v-penetrate class="我是mask"></div>
 ```
