@@ -3,7 +3,7 @@ root = true
 [*]
 charset = utf-8
 #会造成enter下一行，2s未输入内容，光标自动移动到行首的问题，原因不明
-#end_of_line = lf
+end_of_line = lf
 insert_final_newline = true
 trim_trailing_whitespace = true
 

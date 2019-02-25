@@ -6,7 +6,12 @@
             </div>
         </div>
         <div ref="mask" class="mask" v-penetrate>
-            <div class="maskcontent">maskcontent</div>
+            <!-- <div class="innerBOx"> -->
+            <!-- <div class="maskcontent"> -->
+            <!-- <li v-for="n in 30" :key="n">{{n}}</li> -->
+            <!-- </div> -->
+            <!-- </div> -->
+            <!-- <div class="bottom"></div> -->
         </div>
     </div>
 </template>
@@ -43,10 +48,23 @@ body {
     left: 0;
     right: 0;
     overflow: auto;
+    box-sizing: border-box;
     -webkit-overflow-scrolling: touch;
     background: rgba(0, 0, 0, 0.3);
 }
+.innerBOx {
+    box-sizing: border-box;
+    height: 100%;
+    overflow: auto;
+}
 .maskcontent {
-    height: 200vh;
+}
+.bottom {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 100px;
+    background: red;
 }
 </style>
