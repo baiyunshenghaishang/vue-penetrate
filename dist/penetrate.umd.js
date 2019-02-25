@@ -137,7 +137,7 @@ if (typeof window !== 'undefined') {
 
       return null;
     },
-        el = findEl(bindEl) || bindEl,
+        el = null,
         isChildOfEl = function isChildOfEl(el, node) {
       if (el === node) return true;
       if (el.nodeType !== 1) return false;
@@ -157,6 +157,10 @@ if (typeof window !== 'undefined') {
 
     bindEl.addEventListener('touchmove', function (e) {
       // 如果触发touchmove的元素不是el，直接阻止，主要是处理滚动区域不是全屏的情况
+      if (!el) {
+        el = findEl(bindEl) || bindEl;
+      }
+
       if (!isChildOfEl(el, e.target)) {
         e.preventDefault();
         return;
