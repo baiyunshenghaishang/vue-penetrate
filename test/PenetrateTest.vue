@@ -1,17 +1,17 @@
 <template>
     <div>
         <div class="scroll">
-            <div class="content">
+            <div class="scontent">
                 123
             </div>
         </div>
-        <div ref="mask" class="mask" v-penetrate>
-            <!-- <div class="innerBOx"> -->
-            <!-- <div class="maskcontent"> -->
-            <!-- <li v-for="n in 30" :key="n">{{n}}</li> -->
-            <!-- </div> -->
-            <!-- </div> -->
-            <!-- <div class="bottom"></div> -->
+        <div class="multiChooseContent" v-penetrate>
+            <div class="content">
+                <div class="innerContent">
+                    <li v-for="n in 40" :key="n">{{ n }}</li>
+                </div>
+                <div class="btn-box flex"></div>
+            </div>
         </div>
     </div>
 </template>
@@ -37,34 +37,32 @@ body {
     overflow: auto;
     -webkit-overflow-scrolling: touch;
 }
-.content {
+.scontent {
     height: 200vh;
     background: linear-gradient(to bottom, #fff, #ff0000);
 }
-.mask {
+.multiChooseContent {
     position: fixed;
     top: 0;
     bottom: 0;
     left: 0;
     right: 0;
-    overflow: auto;
-    box-sizing: border-box;
-    -webkit-overflow-scrolling: touch;
+    z-index: 9999;
+    overflow: hidden;
     background: rgba(0, 0, 0, 0.3);
 }
-.innerBOx {
+.content {
     box-sizing: border-box;
-    height: 100%;
-    overflow: auto;
-}
-.maskcontent {
-}
-.bottom {
     position: absolute;
+    top: 40vw;
     bottom: 0;
     left: 0;
     right: 0;
-    height: 100px;
-    background: red;
+    padding: 0 4%;
+}
+.innerContent {
+    height: 100%;
+    overflow: auto;
+    -webkit-overflow-scrolling: touch;
 }
 </style>
